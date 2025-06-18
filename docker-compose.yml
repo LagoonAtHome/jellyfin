@@ -1,0 +1,16 @@
+---
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Australia/Sydney
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - /mnt/media/movies:/data/movies
+    ports:
+      - 8097:8096
+    runtime: nvidia
+    restart: unless-stopped
