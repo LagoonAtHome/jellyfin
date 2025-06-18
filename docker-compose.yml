@@ -1,6 +1,9 @@
 ---
 services:
   jellyfin:
+    labels:
+      lagoon.type: basic
+      lagoon.service.usecomposeports: true
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
     environment:
