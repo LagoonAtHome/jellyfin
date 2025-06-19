@@ -4,7 +4,6 @@ services:
     labels:
       lagoon.type: basic
       lagoon.service.usecomposeports: true
-      lagoon.volumes.data.path: /data
       lagoon.volumes.config.path: /config
       lagoon.volumes.transcode.path: /transcode
       lagoon.volumes.data.path: /data
@@ -20,9 +19,6 @@ services:
     restart: unless-stopped
 
 volumes:
-    data:
-      labels:
-        lagoon.type: persistent
     config:
       labels:
         lagoon.type: persistent
