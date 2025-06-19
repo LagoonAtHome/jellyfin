@@ -7,7 +7,7 @@ services:
       lagoon.volumes.data.path: /data
       lagoon.volumes.config.path: /config
       lagoon.volumes.transcode.path: /transcode
-    image: lscr.io/linuxserver/jellyfin:latest
+    image: jellyfin/jellyfin:latest
     container_name: jellyfin
     environment:
       - TZ=Australia/Sydney
@@ -16,7 +16,6 @@ services:
       - /mnt/media/movies:/data/movies
     ports:
       - 8096:8096
-    runtime: nvidia
     restart: unless-stopped
 
 volumes:
