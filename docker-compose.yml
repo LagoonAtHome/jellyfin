@@ -7,6 +7,7 @@ services:
       lagoon.volumes.data.path: /data
       lagoon.volumes.config.path: /config
       lagoon.volumes.transcode.path: /transcode
+      lagoon.volumes.data.path: /data
     image: jellyfin/jellyfin:latest
     container_name: jellyfin
     environment:
@@ -28,4 +29,9 @@ volumes:
     transcode:
       labels:
         lagoon.type: persistent
+    data:
+      labels:
+        lagoon.type: nfs
+        lagoon.nfs.server: host.docker.internal
+        lagoon.nfs.server.path: /Users/jackfuller/nfsshare 
 
