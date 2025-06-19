@@ -4,6 +4,9 @@ services:
     labels:
       lagoon.type: basic
       lagoon.service.usecomposeports: true
+      lagoon.volumes.data.path: /data
+      lagoon.volumes.config.path: /config
+      lagoon.volumes.transcode.path: /transcode
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
     environment:
@@ -15,3 +18,15 @@ services:
       - 8096:8096
     runtime: nvidia
     restart: unless-stopped
+
+volumes:
+    data:
+      labels:
+        lagoon.type: persistent
+    config:
+      labels:
+        lagoon.type: persistent
+    transcode:
+      labels:
+        lagoon.type: persistent
+
