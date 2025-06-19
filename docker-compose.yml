@@ -29,5 +29,5 @@ volumes:
       labels:
         lagoon.type: nfs
         lagoon.nfs.server: host.docker.internal
-        lagoon.nfs.server.path: /Users/jackfuller/nfsshare 
+        lagoon.nfs.server.path: /System/Volumes/Data/Users/jackfuller/nfsshare 
 
