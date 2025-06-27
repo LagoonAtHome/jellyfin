@@ -27,7 +27,5 @@ volumes:
         lagoon.type: persistent
     data:
       labels:
-        lagoon.type: nfs
-        lagoon.nfs.server: host.docker.internal
-        lagoon.nfs.server.path: /System/Volumes/Data/Users/Shared/nfsshare
+        lagoon.type: persistent
 
