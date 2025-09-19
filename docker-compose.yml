@@ -28,4 +28,12 @@ volumes:
     data:
       labels:
         lagoon.type: persistent
+        # ------------------------------------------------------------
+        # Connect to NFS to stream content
+        # Will only work once Lagoon's Build-Deploy-Tool supports it.
+        # ------------------------------------------------------------
+        # lagoon.type: nfs
+        # lagoon.nfs.server: 192.168.1.110
+        # lagoon.nfs.server.path: /mnt/media
+        # ------------------------------------------------------------
 
